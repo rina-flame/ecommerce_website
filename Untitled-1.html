@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+.dropdown {
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+<body>
+
+<button id="dropdownButton">Toggle Dropdown</button>
+<div id="dropdownContent" class="dropdown hidden">
+  <p>Option 1</p>
+  <p>Option 2</p>
+  <p>Option 3</p>
+</div>
+
+
+
+<script>
+const button = document.getElementById('dropdownButton');
+const dropdown = document.getElementById('dropdownContent');
+
+button.addEventListener('click', function () {
+  dropdown.classList.toggle('hidden');
+});
+
+// Optional: Close dropdown if user clicks outside
+window.addEventListener('click', function (event) {
+  if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.classList.add('hidden');
+  }
+});
+
+</script>
+
+</body>
+</html> 

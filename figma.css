@@ -252,6 +252,36 @@ body {
   justify-content: space-between;
   
 }
+.faq_drop_downbtn{
+  background-color: transparent;
+  border: none;
+  opacity: 0px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: pink;}
+
+.show {
+  display: block;
+  color: hotpink;
+  padding: 100px;
+  width: 30px;}
+
 
 .faq_plus {
   width: 28px;
@@ -330,6 +360,8 @@ body {
   width:400px;
   padding: 50px;
 }
+
+
 .footerlinks{
   text-align: center;
 }
